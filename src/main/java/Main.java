@@ -56,7 +56,7 @@ public class Main {
 
                     break;
                 case LIST:
-              
+
              for (Animal i:animals){
                  System.out.println(i);
              }

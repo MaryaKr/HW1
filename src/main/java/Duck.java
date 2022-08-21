@@ -10,6 +10,6 @@ public class Duck extends Animal implements Flying{
 
     @Override
     public void fly() {
-        System.out.println("Я лечу");
+        System.out.println("Я лечу! Если закрыть глаза, то летать сможет и собака с кошкой и  даже человек!");
     }
 }

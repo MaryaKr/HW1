@@ -56,11 +56,15 @@ public class Main {
 
                     break;
                 case LIST:
-                    System.out.println(animals);
+              
+             for (Animal i:animals){
+                 System.out.println(i);
+             }
                     break;
-                case EXIT:
+             case EXIT:
                     System.exit(0);
 
+                    
             }
 
 

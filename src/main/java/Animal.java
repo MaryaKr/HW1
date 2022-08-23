@@ -1,7 +1,7 @@
- class Animal {
+class Animal {
     protected String name;
-    protected Integer age;
-    protected Integer weight;
+    protected int age;
+    protected int weight;
     protected String color;
 
     public Animal(String name, Integer age, Integer weight, String color) {
@@ -58,21 +58,25 @@
     public void eat() {
         System.out.println("Я ем");
     }
-protected String diffAge (int age){
-        String a;
-        if (age>=5){
-            a=" лет";}
-            else if ( age>1){
-            a=" года";
-        }    else { a=" год";}
+
+    protected String diffAge(int age) {
+        String a ="";
+        boolean excAge=(age%100>=11)&&(age%100<=14);
+        int remainder=age%10;
+        if (age==1||remainder==1) a=" год";
+        else if ( (remainder>1 && remainder< 5)||(age>1 && age<5)) a=" года";
+        else if ((age==0)||(remainder==0)||(age>=5&&age<=9)||(remainder>=5&&remainder<=9)||(age>=11&&age<=14)) a=" лет";
+        else if (excAge==true) a=" лет";
+
         return a;
-}
+    }
+
     @Override
-  public String toString() {
+    public String toString() {
         return "Привет! Меня зовут "
                 + name +
-                ", мне " + age +diffAge(age)+
-                ", я вешу " + weight + " кг"+
-                ", мой цвет " + color + '.' ;
+                ", мне " + age + diffAge(age) +
+                ", я вешу " + weight + " кг" +
+                ", мой цвет " + color + '.';
     }
 }

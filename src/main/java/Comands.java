@@ -1,4 +1,4 @@
-enum Komands {
+enum Comands {
     ADD,
     LIST,
     EXIT;
